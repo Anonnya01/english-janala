@@ -4,7 +4,7 @@
 
 ## ⚡ API Endpoints
 
-1. Get ⚡ All Levels
+1. Get ⚡ All **Levels**
 
 ```bash
 https://openapi.programming-hero.com/api/levels/all
