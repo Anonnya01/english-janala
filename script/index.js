@@ -155,6 +155,28 @@ const displayLesson = (lessons) => {
 loadLessons();
 
 
+// -----------for search----------//
+
+document.getElementById("search-btn")
+.addEventListener("click",()=>{
+    removeActive()
+    const input=document.getElementById("input-search")
+    const searchVal=input.value.trim().toLowerCase()
+    console.log(searchVal);
+
+    fetch("https://openapi.programming-hero.com/api/words/all")
+    .then(res=>res.json())
+    .then(data =>{
+        const allWord=data.data
+        console.log(allWord)
+        const filterWords=allWord.
+        filter(word=>word.word.toLowerCase().includes(searchVal))
+        // console.log(filterWords);
+        displayLevelWord(filterWords)
+        
+    })
+    
+})
 
 
 
